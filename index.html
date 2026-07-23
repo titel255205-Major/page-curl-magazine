@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#2a1813" />
+    <title>Éclat — Private Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="showroom" aria-labelledby="magazine-title">
+      <div class="ambient ambient--left" aria-hidden="true"></div>
+      <div class="ambient ambient--right" aria-hidden="true"></div>
+
+      <header class="masthead">
+        <p class="eyebrow">MAISON ÉCLAT · PRIVATE EDITION</p>
+        <h1 id="magazine-title">Portraits of poise</h1>
+        <p class="edition">AUTUMN / 2026</p>
+      </header>
+
+      <section class="reader" aria-label="精品電子雜誌閱讀器">
+        <button class="nav-button nav-button--previous" type="button" aria-label="上一頁" data-action="previous">
+          <span aria-hidden="true">←</span>
+        </button>
+
+        <div class="book-shell" id="bookShell">
+          <canvas id="magazineCanvas" aria-label="電子雜誌頁面。可拖曳四個角翻頁。" role="img"></canvas>
+          <div class="corner-hint" aria-hidden="true"><span></span><small>drag</small></div>
+        </div>
+
+        <button class="nav-button nav-button--next" type="button" aria-label="下一頁" data-action="next">
+          <span aria-hidden="true">→</span>
+        </button>
+      </section>
+
+      <footer class="reader-footer">
+        <p class="page-count" id="pageCount" aria-live="polite">01 / 06</p>
+        <div class="progress-track" aria-label="閱讀進度"><span id="progressBar"></span></div>
+        <p class="instruction">從頁角拖曳，探索下一頁</p>
+      </footer>
+
+      <p class="sr-only" id="readerHelp">使用左右方向鍵或拖曳書頁的四個角瀏覽雜誌。</p>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
